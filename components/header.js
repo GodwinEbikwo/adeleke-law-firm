@@ -151,7 +151,8 @@ const NavList = styled.ul`
       padding-right: 1.5em;
     }
     a {
-      letter-spacing: var(--ls-md);
+      letter-spacing: var(--ls-sm);
+      font-weight: var(--font-md);
     }
   }
 `;

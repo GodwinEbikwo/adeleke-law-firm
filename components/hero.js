@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Div100vh from "react-div-100vh";
 import styled from "styled-components";
 import Image from "next/image";
@@ -61,9 +62,36 @@ export default function Hero() {
                     }),
                   }}
                 >
-                  Ready, Sweat, Mediate
+                  When I do becomes I don't. We'll stand by you.
                 </SplitText>
               </h1>
+            </div>
+
+            <div className="h-left-side hide-for-mobile">
+              <p>
+                <SplitText
+                  initial={{ y: "110%", opacity: 0 }}
+                  animate="enter"
+                  exit={{
+                    y: "110%",
+                  }}
+                  variants={{
+                    enter: (i) => ({
+                      y: "0%",
+                      opacity: 1,
+                      transition: {
+                        duration: 1.5,
+                        ease: [0.83, 0, 0.17, 1],
+                        delay: i * 0.0285,
+                      },
+                    }),
+                  }}
+                >
+                  At Adeleke Family Law, we are the only national law firm
+                  dedicated to family matters with the largest team of
+                  specialist family lawyers in nigeria.
+                </SplitText>
+              </p>
             </div>
           </HeroLeft>
 
@@ -89,12 +117,12 @@ export default function Hero() {
 }
 
 const HeroBox = styled.section`
-  position: fixed;
+  /* position: fixed;
   top: calc(var(--spacer-sm) + var(--golden-ratio));
   left: 0;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 100%; */
   margin-bottom: var(--spacing-lg);
   @media (min-width: 1024px) {
     top: 0;
@@ -117,24 +145,39 @@ const HeroGrid = styled(m.div)`
 const HeroLeft = styled.aside`
   position: relative;
   background: var(--bg);
+  padding: 0 var(--golden-ratio);
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .h-left-inner {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    @media (max-width: 700px) {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+    }
 
     h1 {
       font-size: 12.2vw;
       letter-spacing: var(--ls-lg);
-      max-width: 7.5ch;
-      margin-bottom: 1rem;
-      line-height: 1;
+      line-height: normal;
       font-weight: var(--font-md);
-
       @media (min-width: 700px) {
-        max-width: 8ch;
-        font-size: 10vw;
+        font-size: 5vw;
       }
+    }
+  }
+
+  .h-left-side {
+    position: absolute;
+    bottom: 1rem;
+    right: var(--spacer-lg);
+
+    p {
+      max-width: 30ch;
     }
   }
 `;

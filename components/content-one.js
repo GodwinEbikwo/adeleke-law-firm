@@ -3,7 +3,7 @@ import { SectionBox } from "./container";
 
 export default function One() {
   return (
-    <SectionBox className="box-shadow">
+    <SectionBox>
       <div className="px-2 flex-container">
         <TitleLeft>
           <strong className="text-uppercase">what we can do for you</strong>
