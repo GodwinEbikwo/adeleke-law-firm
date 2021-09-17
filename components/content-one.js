@@ -65,7 +65,7 @@ const ContentRight = styled.aside`
   .content-wrap {
     @media (min-width: 1024px) {
       /* max-width: 780px; */
-      padding-left: 20%;
+      padding-left: 29%;
     }
 
     p {

@@ -61,7 +61,7 @@ export const ContentRight = styled.aside`
 
   .content-wrap {
     @media (min-width: 1024px) {
-      padding-left: 20%;
+      padding-left: 29%;
     }
     .content-list {
       text-transform: uppercase;

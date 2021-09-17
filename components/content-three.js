@@ -99,7 +99,7 @@ const ContentRight = styled.aside`
   .content-wrap {
     @media (min-width: 1024px) {
       /* max-width: 900px; */
-      padding-left: 18%;
+      padding-left: 28%;
     }
 
     .content-row {
