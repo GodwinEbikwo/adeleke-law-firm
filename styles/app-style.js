@@ -105,7 +105,6 @@ button {
 	font-family: inherit;
 	font-weight: 500;
 	padding: 0.8rem 3rem;
-	border: 1px solid var(--border-color);
 	overflow: hidden;
   color: #fff;
 }

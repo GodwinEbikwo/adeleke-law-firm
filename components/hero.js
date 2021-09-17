@@ -140,7 +140,7 @@ const HeroLeft = styled.aside`
 
 const HeroRight = styled.aside`
   position: relative;
-  background: var(--gray);
+  background: var(--accent);
 
   .btn-container {
     position: absolute;

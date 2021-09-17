@@ -62,7 +62,7 @@ export default function Header() {
 
   const style = {
     backgroundColor: navBackground ? "var(--bg)" : "transparent",
-    borderBottom: navBackground ? "1px solid var(--border-color)" : "1px solid var(--gray)",
+    borderBottom: navBackground ? "1px solid var(--border-color)" : "1px solid transparent",
     transition: "all 150ms linear",
     boxShadow: navBackground ? "0 1px 25px rgb(0 0 0 / 0.09)" : "0 0 0 rgb(0 0 0 / 0)",
   };
