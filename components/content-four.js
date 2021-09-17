@@ -107,6 +107,7 @@ const ContentRight = styled.aside`
 
     label,
     .description {
+      font-weight: var(--font-md);
       text-transform: uppercase;
     }
 
@@ -140,7 +141,6 @@ const ContentRight = styled.aside`
 
     input,
     textarea {
-      font-weight: var(--font-md);
       background: transparent;
       border: none;
       border-bottom: 1px solid var(--border-color);

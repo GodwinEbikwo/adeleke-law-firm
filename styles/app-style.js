@@ -203,11 +203,11 @@ html,
     font-feature-settings: 'kern';
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.3;
+    line-height: 1.6;
     color: var(--text-white);
     font-family: var(--font);
     font-weight: 400;
-    font-size: 0.835rem;
+    font-size: 0.9125rem;
 
     &.no-scroll {
       overflow-y: hidden;

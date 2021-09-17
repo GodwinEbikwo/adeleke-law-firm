@@ -70,9 +70,8 @@ const ContentRight = styled.aside`
 
     p {
       margin-bottom: var(--spacing-lg);
-      line-height: 1.5;
       @media (min-width: 1024px) {
-        letter-spacing: var(--ls-sm);
+        /* letter-spacing: var(--ls-sm); */
         /* font-size: 1.125rem; */
         max-width: 50ch;
       }

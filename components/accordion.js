@@ -103,7 +103,6 @@ const AnimatedBody = styled.div`
   p {
     text-align: left;
     text-transform: capitalize;
-    font-weight: var(--font-md);
   }
 
   .content-body {
