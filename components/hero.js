@@ -145,30 +145,10 @@ const HeroRight = styled.aside`
   .btn-container {
     position: absolute;
     padding: 0 var(--golden-ratio);
-    bottom: var(--spacer-lg);
+    bottom: calc(var(--spacer-lg) + 3rem);
     width: 100%;
     @media (min-width: 1024px) {
       bottom: var(--golden-ratio);
     }
-  }
-`;
-
-const TitleContainer = styled.div`
-  display: flex;
-  max-width: 720px;
-  padding-top: var(--spacer-md);
-  padding-bottom: var(--spacer-md);
-  padding-right: var(--golden-ratio);
-  padding-left: var(--golden-ratio);
-`;
-
-const Title = styled.h1`
-  margin: auto;
-  font-weight: var(--font-md);
-  line-height: 0.95;
-  letter-spacing: var(--ls-lg);
-  text-align: center;
-  @media (max-width: 767px) {
-    font-size: 10vw;
   }
 `;
