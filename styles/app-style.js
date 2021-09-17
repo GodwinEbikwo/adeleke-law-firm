@@ -20,7 +20,7 @@ export const AppStyles = createGlobalStyle`
 
   --accent: #f94b35;
 
-  --text-white: #3B465C;
+  --text-white: #111;
   --text-black: #2b2b2b;
 
   --black: #000;
@@ -247,7 +247,7 @@ html,
 
 
 .box-shadow{
-  box-shadow: 0 3px 50px rgb(0 0 0 / 0.3);
+  box-shadow: 0 3px 50px rgb(0 0 0 / 0.1);
 }
 
 .border-top{

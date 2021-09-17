@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { SectionBox } from "./container";
-import { FancyLinkArrow } from "./fancy-link";
+import Accordion from "./accordion";
+import { data } from "@/helpers/data";
 
 export default function Two() {
   return (
@@ -12,50 +13,18 @@ export default function Two() {
         <ContentRight>
           <div className="content-wrap">
             <div className="content-column">
-              <ul className="content-list">
-                <li>
-                  <FancyLinkArrow
-                    a11yText="navigates to the personal injury"
-                    label="Personal Injury"
-                    route="/"
-                  />
-                </li>
-                <li>
-                  <FancyLinkArrow
-                    a11yText="navigates to the product liability"
-                    label="Product liability"
-                    route="/"
-                  />
-                </li>
-                <li>
-                  <FancyLinkArrow
-                    a11yText="navigates to the personal injury"
-                    label="Wrongful Death"
-                    route="/"
-                  />
-                </li>
-                <li>
-                  <FancyLinkArrow
-                    a11yText="navigates to the personal injury"
-                    label="Truck Incident"
-                    route="/"
-                  />
-                </li>
-                <li>
-                  <FancyLinkArrow
-                    a11yText="navigates to the personal injury"
-                    label="Truck Incident"
-                    route="/"
-                  />
-                </li>
-                <li>
-                  <FancyLinkArrow
-                    a11yText="navigates to the personal injury"
-                    label="Medical Malpractice"
-                    route="/"
-                  />
-                </li>
-              </ul>
+              <aside className="content-list">
+                <div className="content-list-item">
+                  {data.map((i, _) => (
+                    <Accordion
+                      key={i.id}
+                      id={i.id}
+                      title={i.title}
+                      content={i.content}
+                    />
+                  ))}
+                </div>
+              </aside>
             </div>
           </div>
         </ContentRight>
@@ -92,7 +61,6 @@ export const ContentRight = styled.aside`
 
   .content-wrap {
     @media (min-width: 1024px) {
-      /* max-width: 780px; */
       padding-left: 20%;
     }
     .content-list {
@@ -102,28 +70,20 @@ export const ContentRight = styled.aside`
         flex-wrap: wrap;
       }
 
-      &:hover > li {
+      /* &:hover > li {
         transition: opacity 400ms var(--easing);
         opacity: 0.35;
       }
 
       &:hover > li:hover {
         opacity: 1;
-      }
+      } */
 
-      li {
+      .content-list-item {
         @media (min-width: 1024px) {
-          width: 50%;
+          width: 100%;
           padding-right: var(--golden-ratio);
         }
-      }
-
-      a {
-        display: block;
-        position: relative;
-        transition: border-top 0.35s var(--easing) 0s;
-        border-top: 1px solid var(--border-color);
-        padding: var(--golden-ratio) 0;
       }
     }
   }

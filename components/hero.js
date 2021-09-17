@@ -60,7 +60,7 @@ export default function Hero() {
                     }),
                   }}
                 >
-                  Ready, Set, Mediate
+                  Ready, Sweat, Mediate
                 </SplitText>
               </h1>
             </div>
@@ -69,11 +69,15 @@ export default function Hero() {
           <HeroRight>
             <div className="btn-container">
               <button
-                className="cta-btn"
                 title="Book Now"
-                aria-label="Book an appoinment now"
+                className="button button--hyperion"
+                style={{ width: "100%", padding: "1.25rem" }}
               >
-                Book now
+                <span>
+                  <span className="text-uppercase">
+                    get a free consultation
+                  </span>
+                </span>
               </button>
             </div>
           </HeroRight>
@@ -111,13 +115,12 @@ const HeroGrid = styled(m.div)`
 
 const HeroLeft = styled.aside`
   position: relative;
-  background: var(--accent);
+  background: var(--bg);
 
   .h-left-inner {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
-    color: #f7f7f7;
 
     h1 {
       font-size: 12.2vw;
@@ -137,18 +140,7 @@ const HeroLeft = styled.aside`
 
 const HeroRight = styled.aside`
   position: relative;
-  background: hsl(7, 94%, 49%);
-
-  .cta-btn {
-    border-radius: none;
-    background: var(--accent);
-    padding: 1.25rem;
-    width: 100%;
-    color: #f7f7f7;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: var(--font-md);
-  }
+  background: var(--gray);
 
   .btn-container {
     position: absolute;

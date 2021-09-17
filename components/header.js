@@ -61,10 +61,10 @@ export default function Header() {
   }, []);
 
   const style = {
-    color: navBackground ? "var(--text-black)" : "white",
     backgroundColor: navBackground ? "var(--bg)" : "transparent",
-    borderBottom: navBackground ? "1px solid var(--border-color)" : "0",
-    transition: "all 250ms linear",
+    borderBottom: navBackground ? "1px solid var(--border-color)" : "1px solid var(--gray)",
+    transition: "all 150ms linear",
+    boxShadow: navBackground ? "0 1px 25px rgb(0 0 0 / 0.09)" : "0 0 0 rgb(0 0 0 / 0)",
   };
 
   return (
