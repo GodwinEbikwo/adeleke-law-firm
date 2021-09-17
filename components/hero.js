@@ -145,7 +145,7 @@ const HeroRight = styled.aside`
   .btn-container {
     position: absolute;
     padding: 0 var(--golden-ratio);
-    bottom: var(--spacer);
+    bottom: var(--spacer-lg);
     width: 100%;
     @media (min-width: 1024px) {
       bottom: var(--golden-ratio);
