@@ -79,9 +79,6 @@ const TitleLeft = styled.aside`
     font-weight: var(--font-md);
     letter-spacing: var(--ls-md);
     margin-bottom: var(--spacing-md);
-    /* @media (min-width: 1024px) {
-      padding-left: 1.125rem;
-    } */
     &::after {
       height: 1px;
       width: 4rem;
@@ -105,7 +102,7 @@ const ContentRight = styled.aside`
   .content-wrap {
     --bg-color: var(--gray);
     @media (min-width: 1024px) {
-      padding-left: 20%;
+      padding-left: 29%;
     }
 
     label,
@@ -132,7 +129,7 @@ const ContentRight = styled.aside`
       display: block;
       line-height: 1;
       @media (min-width: 1024px) {
-        width: 25vw;
+        width: 23vw;
       }
     }
 

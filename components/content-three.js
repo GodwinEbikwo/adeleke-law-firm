@@ -120,7 +120,7 @@ const ContentRight = styled.aside`
           line-height: 1.5;
           @media (min-width: 1024px) {
             letter-spacing: var(--ls-sm);
-            font-size: 1.125rem;
+            /* font-size: 1.125rem; */
           }
         }
       }

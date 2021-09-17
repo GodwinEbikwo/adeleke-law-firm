@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { SplitText } from "@/helpers/split-text";
 import { m } from "framer-motion";
+import Heart from "./heart";
 
 // export default function Hero() {
 //   return (
