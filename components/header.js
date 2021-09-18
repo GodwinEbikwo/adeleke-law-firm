@@ -42,7 +42,6 @@ const sidebar2 = {
 export default function Header() {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
-
   const [navBackground, setNavBackground] = useState(false);
   const navRef = useRef();
   navRef.current = navBackground;
@@ -145,14 +144,16 @@ const HeaderBox = styled(m.header)`
 `;
 
 const NavList = styled.ul`
+  margin-left: 3rem;
+
   & > li {
     text-transform: uppercase;
     &:not(:last-child) {
-      padding-right: 1.5em;
+      padding-right: 3rem;
     }
     a {
       letter-spacing: var(--ls-sm);
-      font-weight: var(--font-md);
+      /* font-weight: var(--font-md); */
     }
   }
 `;

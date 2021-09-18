@@ -475,21 +475,19 @@ html,
 }
 
 .bg-full {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: sticky;
-    height: 87vh;
-    width: 100vw;
-    overflow: hidden;
-    z-index: -1;
-    @media (min-width: 768px) {
-      position: sticky;
-      height: 100vh;
-    }
-    @media (min-width: 1025px) {
-      position: fixed;
-    }
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 1;
+  display: block;
+
+  @media (max-width: 300px) {
+   display: none;
   }
+}
 `;

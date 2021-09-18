@@ -62,12 +62,12 @@ export default function Hero() {
                     }),
                   }}
                 >
-                  When I do becomes I don't. We'll stand by you.
+                  When I do becomes I don't. We'll stand with you.
                 </SplitText>
               </h1>
             </div>
 
-            <div className="h-left-side hide-for-mobile">
+            <div className="h-left-side">
               <p>
                 <SplitText
                   initial={{ y: "110%", opacity: 0 }}
@@ -93,10 +93,26 @@ export default function Hero() {
                 </SplitText>
               </p>
             </div>
+
+            <div className="btn-container">
+              <button title="Book Now" className="button button--hyperion">
+                <span>
+                  <span className="text-uppercase">
+                    get a free consultation
+                  </span>
+                </span>
+              </button>
+            </div>
           </HeroLeft>
 
           <HeroRight>
-            <div className="btn-container">
+            <Image
+              src="https://res.cloudinary.com/godwinebikwo/image/upload/v1631904169/pexels-rodnae-productions-7841434_ej7wch.jpg"
+              alt="adeleke"
+              layout="fill"
+              className="bg-full"
+            />
+            {/* <div className="btn-container" style={{ zIndex: "2" }}>
               <button
                 title="Book Now"
                 className="button button--hyperion"
@@ -108,7 +124,7 @@ export default function Hero() {
                   </span>
                 </span>
               </button>
-            </div>
+            </div> */}
           </HeroRight>
         </HeroGrid>
       </Div100vh>
@@ -117,16 +133,7 @@ export default function Hero() {
 }
 
 const HeroBox = styled.section`
-  /* position: fixed;
-  top: calc(var(--spacer-sm) + var(--golden-ratio));
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%; */
-  margin-bottom: var(--spacing-lg);
-  @media (min-width: 1024px) {
-    top: 0;
-  }
+  position: relative;
 `;
 
 const HeroGrid = styled(m.div)`
@@ -146,39 +153,55 @@ const HeroLeft = styled.aside`
   position: relative;
   background: var(--bg);
   padding: 0 var(--golden-ratio);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
-  @media (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @media (max-width: 700px) {
+    margin-top: 5rem;
+    padding-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .h-left-inner {
-    @media (max-width: 700px) {
+    /* @media (max-width: 700px) {
       position: absolute;
       bottom: 1rem;
       left: 1rem;
-    }
+    } */
+
+    margin-bottom: var(--spacing-lg);
 
     h1 {
-      font-size: 12.2vw;
+      font-size: 2.5rem;
       letter-spacing: var(--ls-lg);
-      line-height: normal;
+      line-height: 1;
       font-weight: var(--font-md);
       @media (min-width: 700px) {
-        font-size: 5vw;
+        /* text-transform: uppercase; */
+        font-size: 4.2vw;
       }
     }
   }
 
   .h-left-side {
-    position: absolute;
-    bottom: 1rem;
-    right: var(--spacer-lg);
-
+    margin-bottom: var(--spacing-lg);
     p {
-      max-width: 30ch;
+      max-width: 50ch;
     }
+    /* position: absolute;
+    bottom: 1rem;
+    right: var(--spacer-lg); */
+
+    /* p {
+      max-width: 30ch;
+    } */
   }
 `;
 
@@ -191,8 +214,5 @@ const HeroRight = styled.aside`
     padding: 0 var(--golden-ratio);
     bottom: calc(var(--spacer-lg) + 3rem);
     width: 100%;
-    @media (min-width: 1024px) {
-      bottom: var(--golden-ratio);
-    }
   }
 `;
