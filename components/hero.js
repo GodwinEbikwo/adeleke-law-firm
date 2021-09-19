@@ -142,7 +142,7 @@ const HeroLeft = styled.aside`
   flex-direction: column;
 
   @media (max-width: 700px) {
-    margin-top: 5rem;
+    margin-top: 4rem;
     padding-top: 2.5rem;
     margin-bottom: 2.5rem;
   }
@@ -163,7 +163,7 @@ const HeroLeft = styled.aside`
     margin-bottom: var(--spacing-lg);
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
       letter-spacing: var(--ls-lg);
       line-height: 1;
       font-weight: var(--font-md);

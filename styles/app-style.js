@@ -92,7 +92,6 @@ button {
 	position: relative;
   display: inline-block;
   text-transform: capitalize;
-  border: 1px solid #777;
 }
 
 .button::before,
@@ -102,7 +101,6 @@ button {
 	left: 0;
 	width: 100%;
   height: 100%;
-  border-radius: 999px;
 }
 
 .button--hyperion {
