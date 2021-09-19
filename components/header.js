@@ -48,7 +48,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 240;
+      const show = window.scrollY > 180;
       if (navRef.current !== show) {
         setNavBackground(show);
       }
@@ -70,6 +70,11 @@ export default function Header() {
       : "0 0 0 rgb(0 0 0 / 0)",
   };
 
+  const show = {
+    opacity: navBackground ? 1 : 0,
+    visibility: navBackground ? "visible" : "hidden",
+  };
+
   return (
     <LazyMotion features={domAnimation}>
       <HeaderBox
@@ -79,21 +84,21 @@ export default function Header() {
         exit="exit"
         style={style}
       >
-        <HeaderBoxInner>
-          <m.nav
-            ref={containerRef}
-            initial={false}
-            animate={isOpen ? "enter" : "exit"}
-            exit="exit"
-            className="flex space-between justify-center align-center px-2"
-            style={{ height: "44px" }}
-          >
+        <m.nav
+          ref={containerRef}
+          initial={false}
+          animate={isOpen ? "enter" : "exit"}
+          exit="exit"
+          className="flex space-between justify-center align-center px-2"
+          style={{ height: "44px" }}
+        >
+          <div className="flex space-between">
             <Link href="/" passHref>
               <a className="flex align-center" style={{ zIndex: "100" }}>
                 <LogoContainer>
                   <Logo />
                 </LogoContainer>
-                <div className="sm-spacing text-uppercase">Adeleke</div>
+                <div className="sm-spacing">Adeleke Law firm</div>
               </a>
             </Link>
 
@@ -108,8 +113,8 @@ export default function Header() {
               <li>
                 <FancyLink
                   route="/contact"
-                  a11yText="navigates to the contact page"
-                  label="Free consulation"
+                  a11yText="navigates to the services page"
+                  label="Services"
                 />
               </li>
               <li>
@@ -120,40 +125,43 @@ export default function Header() {
                 />
               </li>
             </NavList>
+          </div>
 
-            <m.div className="bg hide-for-desktop" variants={sidebar} />
-            <m.div className="bg-2 hide-for-desktop" variants={sidebar2} />
-            <Navigation />
-            <MenuToggle toggle={() => toggleOpen()} />
-          </m.nav>
-        </HeaderBoxInner>
+          <div className="hide-for-mobile" />
+
+          <div style={show} className="hide-for-mobile">
+            <button title="Book Now" className="button button--hyperion">
+              <span>
+                <span>get a free consultation</span>
+              </span>
+            </button>
+          </div>
+
+          <m.div className="bg hide-for-desktop" variants={sidebar} />
+          <m.div className="bg-2 hide-for-desktop" variants={sidebar2} />
+          <Navigation />
+          <MenuToggle toggle={() => toggleOpen()} />
+        </m.nav>
       </HeaderBox>
     </LazyMotion>
   );
 }
-
-const HeaderBoxInner = styled(m.div)``;
 
 const HeaderBox = styled(m.header)`
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  padding: 0.35rem 0;
+  padding: 0.4rem 0;
   z-index: 100;
 `;
 
 const NavList = styled.ul`
-  margin-left: 3rem;
+  margin-left: 6rem;
 
   & > li {
-    text-transform: uppercase;
     &:not(:last-child) {
       padding-right: 3rem;
-    }
-    a {
-      letter-spacing: var(--ls-sm);
-      /* font-weight: var(--font-md); */
     }
   }
 `;

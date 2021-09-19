@@ -4,25 +4,6 @@ import styled from "styled-components";
 import Image from "next/image";
 import { SplitText } from "@/helpers/split-text";
 import { m } from "framer-motion";
-import Heart from "./heart";
-
-// export default function Hero() {
-//   return (
-//     <HeroBox>
-//       <Div100vh>
-//         <TitleContainer className="mx-auto">
-//           <Title>Your trusted partners in pursuing justice</Title>
-//         </TitleContainer>
-//         <Image
-//           src="https://res.cloudinary.com/godwinebikwo/image/upload/v1627317608/inside-weather-OzqieLcs464-unsplash_ipy4fb.jpg"
-//           width={1920}
-//           height={1080}
-//           alt="a shipping container"
-//         />
-//       </Div100vh>
-//     </HeroBox>
-//   );
-// }
 
 const variantsAni = {
   initial: { opacity: 0 },
@@ -62,7 +43,7 @@ export default function Hero() {
                     }),
                   }}
                 >
-                  When I do becomes I don't. We'll stand with you.
+                  When the situation becomes hard. We'll stand with you.
                 </SplitText>
               </h1>
             </div>
@@ -80,9 +61,9 @@ export default function Hero() {
                       y: "0%",
                       opacity: 1,
                       transition: {
-                        duration: 1.5,
+                        duration: 1.4,
                         ease: [0.83, 0, 0.17, 1],
-                        delay: i * 0.0285,
+                        delay: i * 0.015,
                       },
                     }),
                   }}
@@ -95,11 +76,13 @@ export default function Hero() {
             </div>
 
             <div className="btn-container">
-              <button title="Book Now" className="button button--hyperion">
+              <button
+                title="Book Now"
+                aria-label="Book Now"
+                className="button button--hyperion"
+              >
                 <span>
-                  <span className="text-uppercase">
-                    get a free consultation
-                  </span>
+                  <span>get a free consultation</span>
                 </span>
               </button>
             </div>
@@ -107,8 +90,10 @@ export default function Hero() {
 
           <HeroRight>
             <Image
-              src="https://res.cloudinary.com/godwinebikwo/image/upload/v1631904169/pexels-rodnae-productions-7841434_ej7wch.jpg"
+              src="/0.jpg"
               alt="adeleke"
+              // width={1280}
+              // height={1919}
               layout="fill"
               className="bg-full"
             />
@@ -142,7 +127,6 @@ const HeroGrid = styled(m.div)`
   grid-template-rows: repeat(2, 1fr);
   gap: 0;
   height: calc(var(--vh, 1vh) * 100);
-
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -207,7 +191,6 @@ const HeroLeft = styled.aside`
 
 const HeroRight = styled.aside`
   position: relative;
-  background: var(--accent);
 
   .btn-container {
     position: absolute;

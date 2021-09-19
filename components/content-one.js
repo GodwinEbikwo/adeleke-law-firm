@@ -11,10 +11,10 @@ export default function One() {
         <ContentRight>
           <div className="content-wrap">
             <p>
-              If you have been injured or have lost a loved one as a result of
-              another persons negligence, you should not be forced to pay the
-              price for your emotional, physical and financial suffering. It is
-              your legal right to be fully compensated.
+              A tailored approach from a team that really understands family
+              law. We work hard to make family law easier for you to understand
+              and believe that every case is unique – each one needing tailored
+              support and handled with care.
             </p>
 
             <p>
@@ -24,9 +24,13 @@ export default function One() {
               your legal right to be fully compensated.
             </p>
 
-            <button className="button button--hyperion">
+            <button
+              title="Learn more"
+              aria-label="Learn more"
+              className="button button--hyperion"
+            >
               <span>
-                <span className="text-uppercase">Learn more </span>
+                <span>Learn more </span>
               </span>
             </button>
           </div>

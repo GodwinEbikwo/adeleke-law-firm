@@ -7,7 +7,7 @@ export default function Three() {
     <SectionBox>
       <div className="px-2 flex-container">
         <TitleLeft>
-          <strong className="text-uppercase">what we can do for you</strong>
+          <strong className="text-uppercase">why adeleke law</strong>
         </TitleLeft>
         <ContentRight>
           <div className="content-wrap">
@@ -26,14 +26,14 @@ export default function Three() {
 
               <aside className="content-col">
                 <p>
-                  At Adeleke Law Firm, we represent personal injury victims on what is
-                  known as a Contingency Fee Basis. This means that you do not
-                  pay our lawyers a cent unless we win your case. Not only does
-                  this allow you to hire a leading personal injury lawyer in
-                  Cincinnati to fight on your behalf, but it also allows you to
-                  focus on your recovery without having to worry about legal
-                  fees. If you are ready to take the first step towards justice,
-                  you can request a free consultation.
+                  At Adeleke Law Firm, Whatever you’re facing as a family, in
+                  whatever shape yours is, was, or will be, we’ll be here to
+                  listen to what you have to say and help with what you need to
+                  do. As the only national law firm completely dedicated to
+                  family matters. we don’t touch anything else. In us, you will
+                  have an ally who understands what you are going through and
+                  takes the strain. Meaning you can move forward in life from a
+                  position of strength.
                 </p>
               </aside>
             </div>

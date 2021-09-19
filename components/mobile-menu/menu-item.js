@@ -1,19 +1,6 @@
 import { m } from "framer-motion";
 import Link from "next/link";
 
-const linerevealIn = {
-  initial: { x: "-110%", opacity: 0 },
-  enter: {
-    x: "0%",
-    opacity: 1,
-    transition: { duration: 0.75, ease: [0.83, 0, 0.17, 1] },
-  },
-  exit: {
-    x: "-110%",
-    transition: { duration: 0.2, ease: [0.83, 0, 0.17, 1] },
-  },
-};
-
 const revealIn = {
   initial: { y: "110%" },
   enter: {
@@ -52,7 +39,6 @@ export const MenuItem = ({ route, a11yText, label }) => {
               <polyline points="12 5 19 12 12 19" />
             </m.svg>
           </div>
-          {/* <m.div variants={linerevealIn} className="line w-full"></m.div> */}
         </a>
       </Link>
     </li>

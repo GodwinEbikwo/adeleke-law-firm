@@ -83,13 +83,16 @@ button {
 	pointer-events: auto;
 	cursor: pointer;
   background: #eee;
-	border: none;
+  border: none;
+  border-radius: 999px;
 	padding: 1.25rem 3rem;
 	margin: 0;
 	font-family: inherit;
 	font-size: 13.5px;
 	position: relative;
-	display: inline-block;
+  display: inline-block;
+  text-transform: capitalize;
+  border: 1px solid #777;
 }
 
 .button::before,
@@ -98,15 +101,16 @@ button {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+  height: 100%;
+  border-radius: 999px;
 }
 
 .button--hyperion {
 	font-family: inherit;
 	font-weight: 500;
-	padding: 0.8rem 3rem;
+	padding: 0.6rem 1.35rem;
 	overflow: hidden;
-  color: #fff;
+  color: var(--white);
 }
 
 .button--hyperion span {
@@ -123,7 +127,19 @@ button {
 	mix-blend-mode: difference;
 }
 
-.button--hyperion:hover > span > span {
+.button--hyperion::before {
+	content: '';
+	background: #000;
+	transition: transform 0.35s cubic-bezier(0.7, 0, 0.2, 1);
+  transform-origin: 100% 50%;
+}
+
+/* .button--hyperion:hover::before {
+	transform: scale3d(0,1,1);
+	transform-origin: 0% 50%;
+} */
+
+/* .button--hyperion:hover > span > span {
 	animation: MoveUpInitial 0.35s forwards, MoveUpEnd 0.35s forwards 0.35s;
 }
 
@@ -142,17 +158,7 @@ button {
 	}
 }
 
-.button--hyperion::before {
-	content: '';
-	background: #000;
-	transition: transform 0.35s cubic-bezier(0.7, 0, 0.2, 1);
-	transform-origin: 100% 50%;
-}
-
-.button--hyperion:hover::before {
-	transform: scale3d(0,1,1);
-	transform-origin: 0% 50%;
-}
+ */
 
 
 html,

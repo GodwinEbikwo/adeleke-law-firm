@@ -7,9 +7,9 @@ export const data = [
   },
   {
     id: 1,
-    title: "Arrangements for children",
+    title: "Unmarried couples ",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nemo quasi explicabo sequi maiores quia maxime necessitatibus molestiae ad blanditiis!",
+      "We use our in-depth knowledge of this changing area of law, whether we are fighting for your rights or helping you to protect your assets.",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ export const data = [
   },
   {
     id: 6,
-    title: "Chil law",
+    title: "Child law",
     content:
       "Adeleke Family Law’s dedicated children’s law department advises our clients on the options available to them as parents and helps clients to resolve any contested issues raised in relation to child custody and living arrangements of their children. In cases involving children, court action should be used as a last resort and the welfare of the children will remain the paramount consideration.",
   },

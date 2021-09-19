@@ -11,7 +11,7 @@ export default function Four() {
         <ContentRight>
           <div className="content-wrap">
             <form id="contact-form" method="post">
-              <div aria-hidden="true">
+              <div>
                 <label htmlFor="name">Full name</label>
                 <input
                   type="text"
@@ -22,7 +22,7 @@ export default function Four() {
                 />
               </div>
 
-              <div aria-hidden="true">
+              <div>
                 <label htmlFor="email">Email Address</label>
                 <input
                   type="email"
@@ -33,7 +33,7 @@ export default function Four() {
                 />
               </div>
 
-              <div aria-hidden="true">
+              <div>
                 <label htmlFor="email">Email Address</label>
                 <input
                   type="email"
@@ -44,7 +44,7 @@ export default function Four() {
                 />
               </div>
 
-              <div aria-hidden="true">
+              <div>
                 <label htmlFor="email">Email Address</label>
                 <input
                   type="email"
@@ -55,7 +55,7 @@ export default function Four() {
                 />
               </div>
 
-              <div aria-hidden="true">
+              <div>
                 <label htmlFor="message">Message</label>
                 <textarea
                   rows="6"
@@ -108,7 +108,6 @@ const ContentRight = styled.aside`
     label,
     .description {
       font-weight: var(--font-md);
-      text-transform: uppercase;
     }
 
     form {
