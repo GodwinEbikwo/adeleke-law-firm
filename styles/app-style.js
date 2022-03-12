@@ -16,9 +16,9 @@ export const AppStyles = createGlobalStyle`
   --golden-ratio: 1rem;
   --max-width: 90rem;
 
-  --bg:hsla(0, 0%, 95%, 1);
+  --bg:#fff;
 
-  --accent: #f94b35;
+  --accent: #161616;
 
   --text-white: #111;
   --text-black: #2b2b2b;
@@ -27,7 +27,8 @@ export const AppStyles = createGlobalStyle`
   --white: #fff;
   --gray: #eee;
 
-  --font: "Satoshi", 'Helvetica Neue', sans-serif;
+  --font: ui-sans-serif, system-ui, "Satoshi", 'Helvetica Neue', sans-serif;
+  --font-2: ivypresto-display, serif;
  
   --font-sm: 400;
   --font-md: 500;
@@ -47,6 +48,20 @@ export const AppStyles = createGlobalStyle`
   --spacer-md: 3rem;
   --spacer-lg: 5rem;
   --easing: cubic-bezier(0.215, 0.61, 0.355, 1);  
+
+  --indigo1: hsl(225, 60.0%, 99.4%);
+  --indigo2: hsl(223, 100%, 98.6%);
+  --indigo3: hsl(223, 98.4%, 97.1%);
+  --indigo4: hsl(223, 92.9%, 95.0%);
+  --indigo5: hsl(224, 87.1%, 92.0%);
+  --indigo6: hsl(224, 81.9%, 87.8%);
+  --indigo7: hsl(225, 77.4%, 82.1%);
+  --indigo8: hsl(226, 75.4%, 74.5%);
+  --indigo9: hsl(226, 70.0%, 55.5%);
+  --indigo10: hsl(226, 58.6%, 51.3%);
+  --indigo11: hsl(226, 55.0%, 45.0%);
+  --indigo12: hsl(226, 62.0%, 17.0%);
+
 }
 
 *,
@@ -84,7 +99,7 @@ button {
 	cursor: pointer;
   background: #eee;
   border: none;
-  border-radius: 999px;
+  border-radius: 8px;
 	padding: 1.25rem 3rem;
 	margin: 0;
 	font-family: inherit;
@@ -131,32 +146,6 @@ button {
 	transition: transform 0.35s cubic-bezier(0.7, 0, 0.2, 1);
   transform-origin: 100% 50%;
 }
-
-/* .button--hyperion:hover::before {
-	transform: scale3d(0,1,1);
-	transform-origin: 0% 50%;
-} */
-
-/* .button--hyperion:hover > span > span {
-	animation: MoveUpInitial 0.35s forwards, MoveUpEnd 0.35s forwards 0.35s;
-}
-
-@keyframes MoveUpInitial {
-	to {
-		transform: translate3d(0, -115%,0);
-	}
-}
-
-@keyframes MoveUpEnd {
-	from {
-		transform: translate3d(0,100%,0);
-	}
-	to {
-		transform: translate3d(0,0,0);
-	}
-}
-
- */
 
 
 html,
@@ -410,6 +399,7 @@ html,
     }
   }
 
+@media (min-width: 1440px) {
   .link {
     cursor: pointer;
     position: relative;
@@ -445,6 +435,7 @@ html,
     transform-origin: 0% 50%;
     transform: scale3d(1, 1, 1);
   }
+}
 
   .b-speed-block {
     position: relative;

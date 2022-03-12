@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { SplitText } from "@/helpers/split-text";
 import { m } from "framer-motion";
+import herobg from "@/public/0.jpg";
 
 const variantsAni = {
   initial: { opacity: 0 },
@@ -24,54 +25,14 @@ export default function Hero() {
         <HeroGrid variants={variantsAni}>
           <HeroLeft>
             <div className="h-left-inner">
-              <h1>
-                <SplitText
-                  initial={{ y: "110%", opacity: 0 }}
-                  animate="enter"
-                  exit={{
-                    y: "110%",
-                  }}
-                  variants={{
-                    enter: (i) => ({
-                      y: "0%",
-                      opacity: 1,
-                      transition: {
-                        duration: 1.5,
-                        ease: [0.83, 0, 0.17, 1],
-                        delay: i * 0.0285,
-                      },
-                    }),
-                  }}
-                >
-                  When the situation becomes hard. We'll stand with you.
-                </SplitText>
-              </h1>
+              <h1>Experienced Lawyers for the tough situations.</h1>
             </div>
 
             <div className="h-left-side">
               <p>
-                <SplitText
-                  initial={{ y: "110%", opacity: 0 }}
-                  animate="enter"
-                  exit={{
-                    y: "110%",
-                  }}
-                  variants={{
-                    enter: (i) => ({
-                      y: "0%",
-                      opacity: 1,
-                      transition: {
-                        duration: 1.4,
-                        ease: [0.83, 0, 0.17, 1],
-                        delay: i * 0.015,
-                      },
-                    }),
-                  }}
-                >
-                  At Adeleke Family Law, we are the only national law firm
-                  dedicated to family matters with the largest team of
-                  specialist family lawyers in nigeria.
-                </SplitText>
+                At Adeleke Family Law, we are the only national law firm
+                dedicated to family matters with the largest team of specialist
+                family lawyers in nigeria.
               </p>
             </div>
 
@@ -90,26 +51,12 @@ export default function Hero() {
 
           <HeroRight>
             <Image
-              src="/0.jpg"
+              src={herobg}
+              placeholder="blur"
               alt="adeleke"
-              // width={1280}
-              // height={1919}
               layout="fill"
               className="bg-full"
             />
-            {/* <div className="btn-container" style={{ zIndex: "2" }}>
-              <button
-                title="Book Now"
-                className="button button--hyperion"
-                style={{ width: "100%", padding: "1.25rem" }}
-              >
-                <span>
-                  <span className="text-uppercase">
-                    get a free consultation
-                  </span>
-                </span>
-              </button>
-            </div> */}
           </HeroRight>
         </HeroGrid>
       </Div100vh>
@@ -154,12 +101,6 @@ const HeroLeft = styled.aside`
   }
 
   .h-left-inner {
-    /* @media (max-width: 700px) {
-      position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-    } */
-
     margin-bottom: var(--spacing-lg);
 
     h1 {
@@ -168,7 +109,6 @@ const HeroLeft = styled.aside`
       line-height: 1;
       font-weight: var(--font-md);
       @media (min-width: 700px) {
-        /* text-transform: uppercase; */
         font-size: 4.2vw;
       }
     }
@@ -177,15 +117,8 @@ const HeroLeft = styled.aside`
   .h-left-side {
     margin-bottom: var(--spacing-lg);
     p {
-      max-width: 50ch;
+      max-width: 55ch;
     }
-    /* position: absolute;
-    bottom: 1rem;
-    right: var(--spacer-lg); */
-
-    /* p {
-      max-width: 30ch;
-    } */
   }
 `;
 

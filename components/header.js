@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Navigation } from "./mobile-menu/menu-drop";
 import { MenuToggle } from "./mobile-menu/menu-toggle";
 import { m, useCycle, LazyMotion, domAnimation } from "framer-motion";
+import { NavigationMenuDemo } from "./nav-menu";
 
 const sidebar = {
   enter: () => ({
@@ -65,9 +66,9 @@ export default function Header() {
       ? "1px solid var(--border-color)"
       : "1px solid transparent",
     transition: "all 150ms linear",
-    boxShadow: navBackground
-      ? "0 1px 25px rgb(0 0 0 / 0.09)"
-      : "0 0 0 rgb(0 0 0 / 0)",
+    // boxShadow: navBackground
+    //   ? "0 1px 25px rgb(0 0 0 / 0.09)"
+    //   : "0 0 0 rgb(0 0 0 / 0)",
   };
 
   const show = {
@@ -76,74 +77,70 @@ export default function Header() {
   };
 
   return (
-    <LazyMotion features={domAnimation}>
-      <HeaderBox
-        className="w-full"
-        initial="initial"
-        animate="enter"
+    <HeaderBox
+      className="w-full"
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      style={style}
+    >
+      <m.nav
+        ref={containerRef}
+        initial={false}
+        animate={isOpen ? "enter" : "exit"}
         exit="exit"
-        style={style}
+        className="flex space-between justify-center align-center px-2"
+        style={{ height: "44px" }}
       >
-        <m.nav
-          ref={containerRef}
-          initial={false}
-          animate={isOpen ? "enter" : "exit"}
-          exit="exit"
-          className="flex space-between justify-center align-center px-2"
-          style={{ height: "44px" }}
-        >
-          <div className="flex space-between">
-            <Link href="/" passHref>
-              <a className="flex align-center" style={{ zIndex: "100" }}>
-                <LogoContainer>
-                  <Logo />
-                </LogoContainer>
-                <div className="sm-spacing">Adeleke Law firm</div>
-              </a>
-            </Link>
+        <div className="flex space-between">
+          <Link href="/" passHref>
+            <a className="flex align-center" style={{ zIndex: "100" }}>
+              <LogoContainer>
+                <Logo />
+              </LogoContainer>
+              <div className="sm-spacing">Adeleke Law firm</div>
+            </a>
+          </Link>
 
-            <NavList className="inline-flex space-between align-center hide-for-mobile">
-              <li>
-                <FancyLink
-                  route="/about"
-                  a11yText="navigates to the about page"
-                  label="About"
-                />
-              </li>
-              <li>
-                <FancyLink
-                  route="/contact"
-                  a11yText="navigates to the services page"
-                  label="Services"
-                />
-              </li>
-              <li>
-                <FancyLink
-                  route="/resources"
-                  a11yText="navigates to the resources page"
-                  label="Resources"
-                />
-              </li>
-            </NavList>
-          </div>
+          <NavList className="inline-flex space-between align-center hide-for-mobile">
+            <li>
+              <FancyLink
+                route="/about"
+                a11yText="navigates to the about page"
+                label="About"
+              />
+            </li>
 
-          <div className="hide-for-mobile" />
+            <li>
+              <FancyLink
+                route="/resources"
+                a11yText="navigates to the resources page"
+                label="Resources"
+              />
+            </li>
 
-          <div style={show} className="hide-for-mobile">
-            <button title="Book Now" className="button button--hyperion">
-              <span>
-                <span>get a free consultation</span>
-              </span>
-            </button>
-          </div>
+            <li>
+              <NavigationMenuDemo />
+            </li>
+          </NavList>
+        </div>
 
-          <m.div className="bg hide-for-desktop" variants={sidebar} />
-          <m.div className="bg-2 hide-for-desktop" variants={sidebar2} />
-          <Navigation />
-          <MenuToggle toggle={() => toggleOpen()} />
-        </m.nav>
-      </HeaderBox>
-    </LazyMotion>
+        <div className="hide-for-mobile" />
+
+        <div style={show} className="hide-for-mobile">
+          <button title="Book Now" className="button button--hyperion">
+            <span>
+              <span>get a free consultation</span>
+            </span>
+          </button>
+        </div>
+
+        <m.div className="bg hide-for-desktop" variants={sidebar} />
+        <m.div className="bg-2 hide-for-desktop" variants={sidebar2} />
+        <Navigation />
+        <MenuToggle toggle={() => toggleOpen()} />
+      </m.nav>
+    </HeaderBox>
   );
 }
 
@@ -154,6 +151,7 @@ const HeaderBox = styled(m.header)`
   left: 0;
   padding: 0.4rem 0;
   z-index: 100;
+  transition: all 300ms ease;
 `;
 
 const NavList = styled.ul`

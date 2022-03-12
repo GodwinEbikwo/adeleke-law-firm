@@ -14,7 +14,7 @@ export const MenuToggle = ({ toggle }) => (
   <button
     onClick={toggle}
     className="hide-for-desktop"
-    style={{ zIndex: "999" }}
+    style={{ zIndex: "999", marginTop: "0.55rem" }}
   >
     <svg width="24" height="24" viewBox="0 0 23 23">
       <Path
@@ -24,7 +24,7 @@ export const MenuToggle = ({ toggle }) => (
         }}
       />
       <Path
-        d="M 2 9.423 L 15 9.423"
+        d="M 2 9.423 L 30 9.423"
         variants={{
           exit: { opacity: 1 },
           enter: { opacity: 0 },
@@ -32,10 +32,12 @@ export const MenuToggle = ({ toggle }) => (
         transition={{ duration: 0.1 }}
       />
       <Path
+        d="M 2 16.346 L 7.5 16.346"
         variants={{
-          exit: { d: "M 2 16.346 L 7.5 16.346" },
-          enter: { d: "M 3 2.5 L 17 16.346" },
+          exit: { opacity: 0 },
+          enter: { opacity: 1, d: "M 3 2.5 L 17 16.346" },
         }}
+        transition={{ duration: 0.1 }}
       />
     </svg>
   </button>
