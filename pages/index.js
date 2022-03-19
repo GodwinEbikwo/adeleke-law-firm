@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <Layout>
       <m.div initial="initial" animate="enter" exit="exit">
-        <m.div variants={fadeDelay}>
+        <m.div>
           <ContainerBox className="has-mw">
             <Hero />
             <One />
